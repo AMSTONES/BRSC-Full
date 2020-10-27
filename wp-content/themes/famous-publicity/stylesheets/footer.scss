@@ -1,0 +1,47 @@
+@import 'base';
+
+.footer {
+  //background: $white;
+  //color: $black;
+  //display: flex;
+  //align-items: center;
+  //justify-content: space-between;
+  height: auto;
+  min-height: 100px;
+  max-width: 1200px;
+  margin: auto;
+  //color: rgba(0,0,0,0.3);
+  
+  .footer-telephone{
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .footer-address-area {
+    float: left;
+    margin: 10px;
+  }
+  // iframe {
+  //   float: right;
+  //   @media (max-width: 768px) {
+  //     width: 200px;
+  //     height: 100%;
+  //   } 
+  // }
+}
+.footer-links {
+  float: right;
+  //display: flex;
+  //align-items: center;
+  a {
+    color: $black;
+    opacity: 0.6;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+    transition-duration: 0.3s;
+  }
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}

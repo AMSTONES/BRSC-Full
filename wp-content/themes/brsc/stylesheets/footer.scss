@@ -1,0 +1,12 @@
+.footer-container {
+  background: $parchment;
+  width: 100%;
+  // height: 400px;
+  .footer-contact-container {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 1.5rem;
+    }
+  }
+}

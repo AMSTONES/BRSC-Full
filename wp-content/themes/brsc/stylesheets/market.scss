@@ -1,0 +1,26 @@
+.market-item-wrap {
+  position: relative;
+  //background: $parchment;
+  p {
+    font-size: 1rem;
+  }
+  .market-item-price {
+    float: right;
+    padding: 0px 10px;
+    font-size: 1.5rem;
+    background-color: $parchment;
+    text-align: center;
+    //padding: 10px;
+  }
+  .market-item-description {
+
+  }
+
+  .market-item-number {
+    float: left;
+  }
+
+  .market-item-email {
+    float: right;
+  }
+}

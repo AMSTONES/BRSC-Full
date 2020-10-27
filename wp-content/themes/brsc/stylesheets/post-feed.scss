@@ -1,0 +1,80 @@
+@import 'colours';
+
+//specifically for narrow side feed
+.wp-block-column {
+  .feed-container {
+    .feed-post-wrap {
+        .feed-post {
+        width: 100%;
+      }
+    }
+  }
+}
+.feed-post-wrap{
+    margin: 5px;
+    width: 30%;
+    min-width: 300px;
+    .feed-type {
+      text-align: center;
+    }
+    .feed-post {
+      //padding: 5px;
+      margin: 5px;
+      min-width: 300px;
+      height: 300px;
+      overflow: hidden;
+      background: $parchment;
+      position: relative;
+      .feed-thumbnail {
+        //padding: -5px;
+      }
+      .feed-text-area {
+        padding: 0% 2%;
+        flex-direction: column;
+        .feed-description{
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 6;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+        .feed-read-more {
+          position: absolute;
+          bottom: 15px;
+          right: 15px;
+        }
+        &.feed-market {
+
+        }
+      }
+      &:nth-child(even){
+        //background: $parchment;
+      }
+      &:nth-child(odd){
+        //background: red;
+      }
+
+      .feed-title {
+        margin: 0px;
+        font-size: clamp(20px, 1vw, 26px);
+        overflow: hidden;
+        a {
+          text-decoration: none;
+          color: $navy;
+        }
+      }
+      .feed-text {
+        //overflow: hidden;
+        //text-overflow: ellipsis;
+        //font-size: clamp(16px, 1vw, 22px);
+      }
+    }
+}
+//applies to all
+
+
+.feed-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

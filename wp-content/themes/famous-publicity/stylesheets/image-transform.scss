@@ -1,0 +1,13 @@
+.fade-image {
+	transition-duration: 0.5s;
+		&:hover {
+			opacity: 0.7;
+		}
+}
+
+.zoom-image {
+	transition-duration: 0.5s;
+		&:hover {
+			transform: scale(1.1);
+		}
+}

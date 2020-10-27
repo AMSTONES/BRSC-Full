@@ -1,0 +1,39 @@
+@import "base";
+
+.services-container {
+	@media screen and (min-width: 1400px) {
+		max-width: 1400px;
+	}
+	.row:first-of-type {
+		margin-top: 30px;
+	};
+}
+
+
+.services-title {
+	text-align: center;
+	font-family: 'Roboto Slab', serif;
+	font-size: 40px;
+	@media screen and (min-width: 768px) {
+		font-size: 50px;
+	}
+}
+
+.services-text-wrapper {
+	p:first-of-type {
+		padding-top: 10px;
+		font-size: 24px;
+	}
+	p {
+		font-size: 20px;
+    word-break: break-word;
+	}
+}
+
+.services-break {
+	border: 1px solid grey;
+	width: 50%;
+	margin-top: 25px;
+	margin-bottom: 50px;
+	border-radius: 25%;
+}

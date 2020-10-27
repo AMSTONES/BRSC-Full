@@ -1,0 +1,32 @@
+.testimonial-body {
+	@media screen and (max-width: 768px) {
+		min-height: 300px;
+	}
+  .testimonial-quote {
+      transition-property: all;
+      transition-duration: 2s;
+      position: absolute;
+      &.fa-quote-right {
+        right: -25px;
+      }
+      &.fa-quote-left{
+        left: -25px;
+      }
+  }
+	.testimonial-quote-container {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+    position: relative;
+		i {
+			font-size: 20px;
+		}
+		.testimonial-text {
+      //transition: all 2s;
+		}
+	}
+	.testimonial-author {
+		font-family: 'Roboto Slab', serif;
+		font-size: 1.5rem;
+	}
+}

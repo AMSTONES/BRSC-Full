@@ -1,0 +1,13 @@
+// @import 'stylesheets/base';
+
+.wp-block {
+    max-width: 1140px;
+    line-height: 24px;
+    padding-left: 15px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    & p {
+    	margin-bottom: 16px;
+    }
+    // color: $dark-blue;
+}

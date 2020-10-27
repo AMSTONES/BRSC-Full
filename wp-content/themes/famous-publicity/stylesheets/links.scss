@@ -1,0 +1,33 @@
+@import 'base';
+
+.s-pink {
+	color: $pink;
+	transition-duration: 0.3s;
+}
+
+.s-blue {
+	color: $dark-blue;
+	transition-duration: 0.3s;
+}
+
+.s-black {
+	color: $black;
+	transition-duration: 0.3s;
+}
+
+.s-white {
+	color: $white;
+	transition-duration: 0.3s;
+}
+
+.e-white {
+	&:hover {
+		color: #fefefe;
+	}
+}
+
+.e-pink {
+	&:hover {
+		color: $pink;
+	}
+}

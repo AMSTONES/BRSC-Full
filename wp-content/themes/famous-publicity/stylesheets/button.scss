@@ -1,0 +1,21 @@
+@import 'base';
+
+.fp-button {
+	display: inline-block;
+	border-radius: .25rem;
+	padding: 5px 20px;
+	background-color: $black;
+	transition-duration: 0.2s;
+	color: white;
+	text-decoration: none;
+	&:hover {
+		background-color: $dark-blue;
+		color: white;
+	}
+	&.collapse-button {
+		padding: 2px 10px;
+		display: inline;
+		font-size: 16px;
+		font-weight: 600;
+	}
+}
