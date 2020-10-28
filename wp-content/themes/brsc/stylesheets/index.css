@@ -90,7 +90,8 @@ body {
 
 .footer-container {
   background: #f8f5ed;
-  width: 100%; }
+  width: 100%;
+  padding: 15px; }
   .footer-container .footer-contact-container {
     display: flex;
     flex-direction: column; }
