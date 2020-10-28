@@ -13,7 +13,7 @@ function display_events_func(){
       <tr>
         <th>Event name</th>
         <th>Event time</th>
-        <th>Event description</th>
+        <!-- <th>Event description</th> -->
         <th>Location</th>
       </tr>
 
@@ -23,7 +23,7 @@ function display_events_func(){
         <tr>
           <td><? the_title(); ?></td>
           <td><? esc_html_e(get_field('event_time'));?></td>
-          <td><?esc_html_e(get_field('description'));?></td>
+          <!-- <td><?//esc_html_e(get_field('description'));?></td> -->
           <td><?esc_html_e(get_field('location'));?></td>
         </tr>
 
