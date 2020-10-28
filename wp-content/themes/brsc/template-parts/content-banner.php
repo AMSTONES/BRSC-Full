@@ -10,5 +10,5 @@
  ?>
  <div class="banner-container">
   <img class="banner-image" src="<?php echo esc_attr( $img_src ); ?>" srcset="<?php echo esc_attr( $img_srcset ); ?>" sizes="auto" >
-  <h1 class="banner-text"><?php single_post_title(); ?></h1>
+  <!-- <h1 class="banner-text"><?php single_post_title(); ?></h1> -->
  </div>

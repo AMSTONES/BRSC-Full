@@ -44,7 +44,6 @@ body {
   left: 0px;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(120deg, red, white);
   opacity: .2; }
 
 .arrow-wrap {
@@ -88,6 +87,9 @@ body {
 .is-style-navy-stripes td {
   padding: 5px; }
 
+@media screen and (max-width: 768px) {
+  .dataTables_wrapper {
+    width: 95vw; } }
 .footer-container {
   background: #f8f5ed;
   width: 100%;
@@ -224,7 +226,11 @@ body {
   .entry-content-wrap .entry-content {
     max-width: 1100px;
     padding-left: 15px;
-    padding-right: 15px; }
+    padding-right: 15px;
+    margin: 0px; }
+
+.page-title {
+  text-align: center; }
 
 .wp-block-column .feed-container .feed-post-wrap .feed-post {
   width: 100%; }

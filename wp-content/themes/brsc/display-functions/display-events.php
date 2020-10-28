@@ -1,5 +1,4 @@
 <?
-
 function display_events_func(){
   $query = new WP_Query( array(
       'post_type' => 'event',

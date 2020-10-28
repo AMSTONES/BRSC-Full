@@ -18,7 +18,9 @@
   </header><!-- .entry-header -->
   <div class="entry-content-wrap">
     <div class="entry-content">
-      <?php
+      <? if (!is_front_page() ) : ?>
+          <h1 class="page-title"><?php single_post_title(); ?></h1>
+      <? endif;
       the_content();
       $children = get_pages( array( 'child_of' => $post->ID ) );
       if ( is_page() && count( $children ) > 0 ) { echo( do_shortcode('[display-nav-image-grid]')); };
