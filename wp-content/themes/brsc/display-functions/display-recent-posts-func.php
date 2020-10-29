@@ -90,10 +90,10 @@ function display_one_post($query, $title=''){
         <h2 class="feed-title">
           <a href="<?php esc_url(the_permalink())?>"><?php the_title() ?></a>
         </h2>
-          <? display_race_time() ?>
-          <? display_blurb()?>
+          <? display_race_time(); ?>
+          <? display_excerpt(); ?>
           <? display_price()?>
-          <? display_description()?>
+          <? display_description(); ?>
           <a class='feed-read-more' href="<?php esc_url(the_permalink())?>">Read more</a>
         </div>
       </div>
@@ -107,20 +107,20 @@ function display_one_post($query, $title=''){
   <? }
 }
 
-function display_blurb() {
-  if (get_field('blurb')) { ?>
-     <p class="feed-description"><? esc_html_e(get_field('blurb')); ?></p>
-  <? }
+function display_excerpt() {
+  if (!get_field('item_description')) { ?>
+    <p class="feed-description"><? esc_html_e(get_the_excerpt()); ?></p><?
+  }
 }
 
 function display_price() {
   if (get_field('price')) { ?>
-     <p><? esc_html_e('£' . get_field('price')); ?></p>
+    <p><? esc_html_e('£' . get_field('price')); ?></p>
   <? }
 }
 
 function display_description() {
   if (get_field('item_description') && !has_post_thumbnail()) { ?>
-     <p class='feed-description'><? esc_html_e(get_field('item_description')); ?></p>
+    <p class='feed-description'><? esc_html_e(get_field('item_description')); ?></p>
   <? }
 }
