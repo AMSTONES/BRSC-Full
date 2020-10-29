@@ -80,7 +80,7 @@ function display_one_post($query, $title=''){
       <? if ($title) { ?>
         <h2 class="feed-type"><?php esc_html_e($title)?></h2>
       <? } ?>
-      <div class="<?php esc_html_e($args) ?>feed-post">
+      <div class="<?php esc_html_e($args) ?>feed-post brsc-rounded">
         <? if ( has_post_thumbnail() ) { ?>
           <a href="<?php esc_url(the_permalink())?>">
             <? the_post_thumbnail('post-thumbnail', array('class' => 'feed-thumbnail')); ?>

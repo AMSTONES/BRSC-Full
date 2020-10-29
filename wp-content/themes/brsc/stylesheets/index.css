@@ -118,11 +118,15 @@ body {
     padding: 0px 10px;
     font-size: 1.5rem;
     background-color: #f8f5ed;
-    text-align: center; }
+    text-align: center;
+    border-radius: 5px; }
   .market-item-wrap .market-item-number {
     float: left; }
   .market-item-wrap .market-item-email {
     float: right; }
+
+.brsc-rounded {
+  border-radius: 10px; }
 
 .main-navigation .nav-menu {
   background: #f8f5ed;
@@ -242,14 +246,14 @@ body {
   .feed-post-wrap .feed-type {
     text-align: center; }
   .feed-post-wrap .feed-post {
-    margin: 5px;
+    margin: 10px;
     min-width: 300px;
     height: 300px;
     overflow: hidden;
     background: #f8f5ed;
     position: relative; }
     .feed-post-wrap .feed-post .feed-text-area {
-      padding: 0% 2%;
+      padding: 3% 3%;
       flex-direction: column; }
       .feed-post-wrap .feed-post .feed-text-area .feed-description {
         text-overflow: ellipsis;
@@ -259,7 +263,7 @@ body {
         overflow: hidden; }
       .feed-post-wrap .feed-post .feed-text-area .feed-read-more {
         position: absolute;
-        bottom: 15px;
+        bottom: 5px;
         right: 15px; }
     .feed-post-wrap .feed-post .feed-title {
       margin: 0px;

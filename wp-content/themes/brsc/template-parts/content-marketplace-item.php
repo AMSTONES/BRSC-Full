@@ -35,7 +35,7 @@
     <div class="market-item-wrap">
       <h2 class="market-item-price"><? esc_html_e('£' . $fields['price']); ?></h2>
       <p class="market-item-description"><? esc_html_e($fields['item_description']); ?></p>
-      <p class="market-item-number"><?  esc_html_e($fields['contact_number']); ?></p>
+      <p class="market-item-number"><?  esc_html_e('Contact number: ' . $fields['contact_number']); ?></p>
       <p class="market-item-email">
         <a href="mailto:<? esc_html_e($fields['contact_email']); ?>">
           <? esc_html_e($fields['contact_email']); ?>
@@ -62,7 +62,7 @@
       ?>
     </div><!-- .entry-content -->
   </div>
-  <h1>content-marketplace-item.php</h1>
+  <!-- <h1>content-marketplace-item.php</h1> -->
   <footer class="entry-footer">
     <?php brsc_entry_footer(); ?>
   </footer><!-- .entry-footer -->

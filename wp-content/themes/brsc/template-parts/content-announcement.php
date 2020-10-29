@@ -57,7 +57,7 @@
       ?>
     </div><!-- .entry-content -->
   </div>
-  <h1>content-announcement.php</h1>
+  <!-- <h1>content-announcement.php</h1> -->
   <footer class="entry-footer">
     <?php brsc_entry_footer(); ?>
   </footer><!-- .entry-footer -->
