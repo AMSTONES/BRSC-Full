@@ -1,0 +1,37 @@
+.nav-image-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+    .nav-element-container {
+    position: relative;
+    padding: 5px 10px;
+    //overflow: hidden;
+      &.nav-image-medium {
+        flex: 2 1 600px;
+      }
+      &.nav-image-small {
+        flex: 1 1 300px;
+      }
+    .nav-image-link {
+      text-decoration: none;
+    }
+    .nav-title {
+      position: absolute;
+      left: 25px;
+      color: $parchment;
+      text-shadow: 2px 2px 5px $black;
+    }
+    .nav-image {
+      object-fit: cover;
+      height: 300px;
+      width: 100%;
+      min-width: 300px;
+      //transition: transform .4s;
+      &:hover {
+        //transform: scale(1.2);
+
+        //z-index: 0;
+      }
+    }
+  }
+}

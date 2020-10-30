@@ -1,0 +1,38 @@
+@import 'breakpoints';
+
+.event-table {
+  tr:nth-child(even) {
+    background-color: $parchment;
+  }
+  tr:nth-child(odd) {
+    background-color: $navy;
+    color: $white;
+  }
+  td {
+    padding: 5px;
+  }
+}
+
+.is-style-navy-stripes {
+  tr:nth-child(even) {
+    background-color: $parchment;
+    a {
+      color: black;
+    }
+  }
+  tr:nth-child(odd) {
+    background-color: $navy;
+    color: $white;
+    a {
+      color: $white;
+    }
+  }
+  td {
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .dataTables_wrapper {
+    width: 95vw;
+  }
+}
