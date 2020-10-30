@@ -1,0 +1,31 @@
+.fp-news-container {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  .fp-grid {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  justify-content: center;
+    .fp-grid-element {
+      margin: 10px 0px;
+      @media (max-width: 1000px){
+        padding: 0px;
+      }
+      h3 {
+        margin: 10px 0px;
+      }
+      .fp-grid-image-container {
+        overflow: hidden;
+        .fp-grid-image {
+        object-fit: cover;
+        height: 25vh;
+        width: 100%;
+        overflow: hidden;
+        }
+      }
+
+    }
+  }
+}

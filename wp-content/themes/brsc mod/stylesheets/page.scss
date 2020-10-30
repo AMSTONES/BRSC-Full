@@ -1,0 +1,14 @@
+.entry-content-wrap {
+  display: flex;
+  justify-content: center;
+  .entry-content {
+    max-width: 1100px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0px;
+  }
+}
+
+.page-title {
+  text-align: center;
+}
