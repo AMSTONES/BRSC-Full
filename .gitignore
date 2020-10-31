@@ -10,6 +10,7 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 
+wp-content/plugins/all-in-one-wp-migration/
 # # ignore these mu-plugins
 # wp-content/plugins/hello.php
 
@@ -17,6 +18,8 @@ wp-content/*
 wp-content/themes/twenty*/
 
 *.map
+
+
 
 # # ignore node dependency directories
 # node_modules/

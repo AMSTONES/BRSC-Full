@@ -83,12 +83,35 @@ body {
 
 .brsc-diamond-trio {
   position: relative;
-  bottom: 250px;
-  left: 50%; }
+  left: 50%;
+  margin-left: calc(2.5vw * -1.5);
+  bottom: 3vw; }
+  .brsc-diamond-trio:hover .brsc-diamond.diamond-left {
+    bottom: 2.5vw;
+    left: calc(2.5vw * 0.4); }
+  .brsc-diamond-trio:hover .brsc-diamond.diamond-right {
+    bottom: 2.5vw;
+    left: calc(2.5vw * 1.32); }
   .brsc-diamond-trio .brsc-diamond {
     mix-blend-mode: darken;
     position: absolute;
-    width: 100px; }
+    width: 2.5vw;
+    z-index: 10;
+    transition-property: all;
+    transition-duration: 0.5s;
+    bottom: 0; }
+    .brsc-diamond-trio .brsc-diamond.diamond-left {
+      left: 0px;
+      transition-property: all;
+      transition-duration: 0.5s; }
+    .brsc-diamond-trio .brsc-diamond.diamond-center {
+      left: calc(2.5vw * 0.86);
+      transition-property: all;
+      transition-duration: 0.5s; }
+    .brsc-diamond-trio .brsc-diamond.diamond-right {
+      left: calc(2.5vw * 1.72);
+      transition-property: all;
+      transition-duration: 0.5s; }
 
 .event-table tr:nth-child(even) {
   background-color: #f8f5ed; }
