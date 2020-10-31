@@ -9,7 +9,7 @@ function display_recent_posts_func($atts){
   if ($post_category == 'front-page'){
     $queries = query_loop();
     ob_start(); ?>
-    <div class='feed-container'>
+    <div class='feed-container feed-front-page'>
     <?php
     $titles = ['Recent', 'Important', 'Racing'];
     for ($x = 0; $x < 3; $x++) {
@@ -23,9 +23,7 @@ function display_recent_posts_func($atts){
     _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
     endif;
     wp_reset_postdata();
-    }
-
-    ?>
+    } ?>
     </div>
     <?php $ob_str=ob_get_contents();
     ob_end_clean();
@@ -56,7 +54,6 @@ function display_recent_posts_func($atts){
     return $ob_str;
   }
 }
-
   function query_loop(){
     $queries = [];
     $query_args = [ null, 'tag' => 'important', 'category_name' => 'racing' ];
@@ -70,12 +67,8 @@ function display_recent_posts_func($atts){
       ));
     }
     return $queries;
-  } ?>
-
-
-<?
-function display_one_post($query, $title=''){
-  ?>
+  }
+function display_one_post($query, $title=''){ ?>
     <div class="feed-post-wrap">
       <? if ($title) { ?>
         <h2 class="feed-type"><?php esc_html_e($title)?></h2>
@@ -98,10 +91,9 @@ function display_one_post($query, $title=''){
         </div>
       </div>
     </div>
+<? }
 
-<?php } ?>
-
-<? function display_race_time() {
+  function display_race_time() {
   if (get_field('race_time')) { ?>
      <p><? esc_html_e(get_field('race_time')); ?></p>
   <? }
