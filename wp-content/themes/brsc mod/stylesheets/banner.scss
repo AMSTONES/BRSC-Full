@@ -66,6 +66,22 @@
     left: 50%;
     transform: translate(-50%, -100%);
   }
+  .banner-home-text {
+    position: absolute;
+    top: 25%;
+    left: 4%;
+    color: white;
+    width: 38%;
+    font-family: 'Playfair Display', serif;
+    h1 {
+      color: white;
+      font-style: italic;
+      text-decoration: underline;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  }
 }
 
 .banner-container::after {
@@ -105,7 +121,7 @@
   top:-100px;
 }
 
-$diamond-size: 2.5vw; //define in vw
+$diamond-size: 4vw; //define in vw
 
 @mixin diamond-container {
   position: relative;
@@ -123,28 +139,41 @@ $diamond-size: 2.5vw; //define in vw
       }
     }
   }
+  &.diamond-point-down {
+    .brsc-diamond {
+      &.diamond-left {
+        bottom: $diamond-size;
+        left: calc(#{$diamond-size} * 0.4);
+      }
+      &.diamond-right {
+        bottom: $diamond-size;
+        left: calc(#{$diamond-size} * 1.32);
+      }
+    }
+  }
   .brsc-diamond {
     mix-blend-mode: darken;
     position: absolute;
     width: $diamond-size;
     z-index: 10;
     transition-property: all;
-    transition-duration: 0.5s;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
     bottom: 0;
     &.diamond-left {
       left: 0px;
-      transition-property: all;
-      transition-duration: 0.5s;
+      //transition-property: all;
+      //transition-duration: 0.5s;
     }
     &.diamond-center {
       left: calc(#{$diamond-size} * 0.86);
-      transition-property: all;
-      transition-duration: 0.5s;
+      //transition-property: all;
+      //transition-duration: 0.5s;
     }
     &.diamond-right {
       left: calc(#{$diamond-size} * 1.72);
-      transition-property: all;
-      transition-duration: 0.5s;
+      //transition-property: all;
+      //transition-duration: 0.5s;
     }
   }
 }

@@ -18,7 +18,10 @@ if (is_front_page()) { ?>
         <img class="brsc-diamond diamond-right" src="<?php echo $brsc_logo ?>">
       </div>
     </a>
-  <!-- <h1 class="banner-text"><?php single_post_title(); ?></h1> -->
+    <div class="banner-home-text load-hidden">
+      <h1>Welcome</h1>
+      <p>The BRSC was set up in the summer of 1931 to provide private, informal racing between Beaulieu residents and this largely remains the case to this day. The club continues to encourage a relaxed approach to racing, training, pottering and of course, socialising, on the unique Beaulieu River. You can find more on the club’s history here.</p>
+    </div>
  </div>
  <a id="content-start"></a>
 <? } else { ?>
