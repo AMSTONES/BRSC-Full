@@ -4,6 +4,23 @@ h1 {
 body {
   font-family: georgia !important; }
 
+.load-hidden {
+  display: none; }
+
+.brsc-wiggle {
+  animation-name: brsc-wiggle;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  opacity: 0.8; }
+
+@keyframes brsc-wiggle {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(-20px); }
+  100% {
+    transform: translateY(0); } }
 .front-banner-text {
   text-align: center;
   font-size: 60px;
@@ -50,6 +67,19 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -100%); }
+  .banner-container .banner-home-text {
+    position: absolute;
+    top: 25%;
+    left: 4%;
+    color: white;
+    width: 38%;
+    font-family: 'Playfair Display', serif; }
+    .banner-container .banner-home-text h1 {
+      color: white;
+      font-style: italic;
+      text-decoration: underline; }
+    .banner-container .banner-home-text p {
+      font-size: 1.5em; }
 
 .banner-container::after {
   content: "";
@@ -84,34 +114,35 @@ body {
 .brsc-diamond-trio {
   position: relative;
   left: 50%;
-  margin-left: calc(2.5vw * -1.5);
+  margin-left: calc(4vw * -1.5);
   bottom: 3vw; }
   .brsc-diamond-trio:hover .brsc-diamond.diamond-left {
-    bottom: 2.5vw;
-    left: calc(2.5vw * 0.4); }
+    bottom: 4vw;
+    left: calc(4vw * 0.4); }
   .brsc-diamond-trio:hover .brsc-diamond.diamond-right {
-    bottom: 2.5vw;
-    left: calc(2.5vw * 1.32); }
+    bottom: 4vw;
+    left: calc(4vw * 1.32); }
+  .brsc-diamond-trio.diamond-point-down .brsc-diamond.diamond-left {
+    bottom: 4vw;
+    left: calc(4vw * 0.4); }
+  .brsc-diamond-trio.diamond-point-down .brsc-diamond.diamond-right {
+    bottom: 4vw;
+    left: calc(4vw * 1.32); }
   .brsc-diamond-trio .brsc-diamond {
     mix-blend-mode: darken;
     position: absolute;
-    width: 2.5vw;
+    width: 4vw;
     z-index: 10;
     transition-property: all;
-    transition-duration: 0.5s;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
     bottom: 0; }
     .brsc-diamond-trio .brsc-diamond.diamond-left {
-      left: 0px;
-      transition-property: all;
-      transition-duration: 0.5s; }
+      left: 0px; }
     .brsc-diamond-trio .brsc-diamond.diamond-center {
-      left: calc(2.5vw * 0.86);
-      transition-property: all;
-      transition-duration: 0.5s; }
+      left: calc(4vw * 0.86); }
     .brsc-diamond-trio .brsc-diamond.diamond-right {
-      left: calc(2.5vw * 1.72);
-      transition-property: all;
-      transition-duration: 0.5s; }
+      left: calc(4vw * 1.72); }
 
 .event-table tr:nth-child(even) {
   background-color: #f8f5ed; }

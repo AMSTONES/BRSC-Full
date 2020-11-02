@@ -9,3 +9,20 @@ body {
   //background: $white !important;
   font-family: georgia !important;
 }
+
+.load-hidden {
+  display: none;
+}
+
+.brsc-wiggle {
+  animation-name: brsc-wiggle;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-duration: 2.5s;
+  opacity:0.8;
+}
+@keyframes brsc-wiggle {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
