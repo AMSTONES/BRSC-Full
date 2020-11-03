@@ -3,13 +3,13 @@
 
 .main-navigation {
   .nav-menu {
-    background: $parchment;
+    background: $navy;
     position: relative;
     li {
       padding: 5px;
 
       a {
-        color: $navy;
+        color: white;
         &:hover {
           color: red;
           //add or remove display property of child submenu based on hover
@@ -33,7 +33,7 @@
 
         .sub-menu {
           position: absolute;
-          background: $navy;
+          background: white;
           display: none;
           left: 0px;
           z-index: 999;
@@ -46,7 +46,7 @@
           .menu-item{
             text-align: center;
             a {
-              color: $parchment;
+              color: $navy;
               width: 100%;
             }
           }
@@ -70,7 +70,7 @@
     position: fixed;
     z-index: 100;
     width: 100%;
-    background: $parchment;
+    background: $navy;
   }
   }
 

@@ -4,7 +4,6 @@ jQuery(document).ready(function($) {
   //let foo = $('.header-top').css();
   let navMenu = $('#primary-menu');
   $(window).scroll(function () {
-
     var currentScroll = $(this).scrollTop();
     if (currentScroll > headTopHeight) {
       navMenu.addClass('scrolledDown');
@@ -63,4 +62,3 @@ jQuery(document).ready(function($) {
   }
 
 })
-

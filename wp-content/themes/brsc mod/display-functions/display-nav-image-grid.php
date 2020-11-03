@@ -57,7 +57,7 @@ function nav_container_out($navObject, $imageUrl, $image_modifier, $image_srcset
   <div class="nav-element-container <?php esc_html_e( $image_modifier)?>">
     <a class="nav-image-link" href="<?echo esc_url($itemLink)?>">
       <h2 class="nav-title"><?php esc_html_e($navObject->$itemTitle);?></h2>
-      <img class="nav-image" srcset="<?php echo esc_attr( $image_srcset ); ?>" src="<?php echo esc_attr($imageUrl);?>">
+      <img class="nav-image brsc-rounded" srcset="<?php echo esc_attr( $image_srcset ); ?>" src="<?php echo esc_attr($imageUrl);?>">
     </a>
   </div>
   <?

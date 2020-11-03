@@ -1,9 +1,9 @@
-@import 'colours';
 .header-top {
   height: 110px;
   display: flex;
   justify-content: center;
-  background: $parchment;
+  background: $navy;
+  mix-blend-mode: darken;
   .logo-container {
     img {
       width: 175px;
