@@ -175,7 +175,8 @@ body {
   height: 110px;
   display: flex;
   justify-content: center;
-  background: #f8f5ed; }
+  background: #272677;
+  mix-blend-mode: darken; }
   .header-top .logo-container img {
     width: 175px;
     margin-top: 5px; }
@@ -200,13 +201,13 @@ body {
   border-radius: 10px; }
 
 .main-navigation .nav-menu {
-  background: #f8f5ed;
+  background: #272677;
   position: relative;
   justify-content: center; }
   .main-navigation .nav-menu li {
     padding: 5px; }
     .main-navigation .nav-menu li a {
-      color: #272677; }
+      color: white; }
       .main-navigation .nav-menu li a:hover {
         color: red; }
   .main-navigation .nav-menu .menu-item {
@@ -217,7 +218,7 @@ body {
         display: flex; }
       .main-navigation .nav-menu .menu-item .sub-menu {
         position: absolute;
-        background: #272677;
+        background: white;
         display: none;
         left: 0px;
         z-index: 999;
@@ -230,7 +231,7 @@ body {
         .main-navigation .nav-menu .menu-item .sub-menu .menu-item {
           text-align: center; }
           .main-navigation .nav-menu .menu-item .sub-menu .menu-item a {
-            color: #f8f5ed;
+            color: #272677;
             width: 100%; } }
     .main-navigation .nav-menu .menu-item.menu-item-has-children .sub-menu {
       display: none; }
@@ -241,7 +242,7 @@ body {
     position: fixed;
     z-index: 100;
     width: 100%;
-    background: #f8f5ed; }
+    background: #272677; }
 
 .main-navigation.logged-in .scrolledDown {
   top: 32px; }
@@ -321,11 +322,15 @@ body {
     min-width: 300px;
     height: 300px;
     overflow: hidden;
-    background: #f8f5ed;
+    background: #272677;
     position: relative; }
     .feed-post-wrap .feed-post .feed-text-area {
       padding: 3% 3%;
       flex-direction: column; }
+      .feed-post-wrap .feed-post .feed-text-area p {
+        color: white; }
+      .feed-post-wrap .feed-post .feed-text-area a {
+        color: white; }
       .feed-post-wrap .feed-post .feed-text-area .feed-description {
         text-overflow: ellipsis;
         display: -webkit-box;
@@ -342,7 +347,7 @@ body {
       overflow: hidden; }
       .feed-post-wrap .feed-post .feed-title a {
         text-decoration: none;
-        color: #272677; }
+        color: white; }
 
 .feed-container {
   display: flex;

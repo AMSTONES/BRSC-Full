@@ -23,7 +23,7 @@
       min-width: 300px;
       height: 300px;
       overflow: hidden;
-      background: $parchment;
+      background: $navy;
       position: relative;
       // border-radius: 15px;
 
@@ -33,6 +33,12 @@
       .feed-text-area {
         padding: 3% 3%;
         flex-direction: column;
+        p {
+          color: white;
+        }
+        a {
+          color: white;
+        }
         .feed-description{
           text-overflow: ellipsis;
           display: -webkit-box;
@@ -62,7 +68,7 @@
         overflow: hidden;
         a {
           text-decoration: none;
-          color: $navy;
+          color: white;
         }
       }
       .feed-text {

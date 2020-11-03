@@ -18,7 +18,7 @@ if (is_front_page()) { ?>
         <img class="brsc-diamond diamond-right" src="<?php echo $brsc_logo ?>">
       </div>
     </a>
-    <div class="banner-home-text load-hidden">
+    <div class="banner-home-text">
       <h1>Welcome to the Beaulieu River Sailing Club</h1>
     </div>
  </div>
