@@ -1,13 +1,10 @@
-@import 'colours';
-@import 'breakpoints';
-
 .main-navigation {
+  width: 100%;
   .nav-menu {
     background: $navy;
     position: relative;
     li {
       padding: 5px;
-
       a {
         color: white;
         &:hover {
@@ -48,6 +45,9 @@
             a {
               color: $navy;
               width: 100%;
+              &:hover {
+                color: $red;
+              }
             }
           }
         }

@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
   //assume height is in px
-  let headTopHeight = $('.header-top').css('height').slice(0,3);
+  let headTopHeight = $('.header-wrap').css('height').slice(0,3);
   //let foo = $('.header-top').css();
   let navMenu = $('#primary-menu');
   $(window).scroll(function () {
