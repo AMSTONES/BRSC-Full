@@ -19,8 +19,7 @@ if (is_front_page()) { ?>
       </div>
     </a>
     <div class="banner-home-text load-hidden">
-      <h1>Welcome</h1>
-      <p>The BRSC was set up in the summer of 1931 to provide private, informal racing between Beaulieu residents and this largely remains the case to this day. The club continues to encourage a relaxed approach to racing, training, pottering and of course, socialising, on the unique Beaulieu River. You can find more on the club’s history here.</p>
+      <h1>Welcome to the Beaulieu River Sailing Club</h1>
     </div>
  </div>
  <a id="content-start"></a>

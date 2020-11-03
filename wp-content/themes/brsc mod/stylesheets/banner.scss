@@ -74,12 +74,12 @@
     width: 38%;
     font-family: 'Playfair Display', serif;
     h1 {
+      font-size: calc(20px + (60 - 16) * ((100vw - 375px) / (1600 - 375)));
       color: white;
       font-style: italic;
-      text-decoration: underline;
     }
     p {
-      font-size: 1.5em;
+      font-size: calc(16px + (24 - 16) * ((100vw - 375px) / (1600 - 375)));
     }
   }
 }
@@ -120,66 +120,3 @@
   position: relative;
   top:-100px;
 }
-
-$diamond-size: 4vw; //define in vw
-
-@mixin diamond-container {
-  position: relative;
-  left: 50%;
-  margin-left: calc(#{$diamond-size} * -1.5);
-  &:hover {
-    .brsc-diamond {
-      &.diamond-left {
-        bottom: $diamond-size;
-        left: calc(#{$diamond-size} * 0.4);
-      }
-      &.diamond-right {
-        bottom: $diamond-size;
-        left: calc(#{$diamond-size} * 1.32);
-      }
-    }
-  }
-  &.diamond-point-down {
-    .brsc-diamond {
-      &.diamond-left {
-        bottom: $diamond-size;
-        left: calc(#{$diamond-size} * 0.4);
-      }
-      &.diamond-right {
-        bottom: $diamond-size;
-        left: calc(#{$diamond-size} * 1.32);
-      }
-    }
-  }
-  .brsc-diamond {
-    mix-blend-mode: darken;
-    position: absolute;
-    width: $diamond-size;
-    z-index: 10;
-    transition-property: all;
-    transition-duration: 2s;
-    transition-timing-function: ease-out;
-    bottom: 0;
-    &.diamond-left {
-      left: 0px;
-      //transition-property: all;
-      //transition-duration: 0.5s;
-    }
-    &.diamond-center {
-      left: calc(#{$diamond-size} * 0.86);
-      //transition-property: all;
-      //transition-duration: 0.5s;
-    }
-    &.diamond-right {
-      left: calc(#{$diamond-size} * 1.72);
-      //transition-property: all;
-      //transition-duration: 0.5s;
-    }
-  }
-}
-
-.brsc-diamond-trio {
-    @include diamond-container;
-    bottom: 3vw;
-}
-
