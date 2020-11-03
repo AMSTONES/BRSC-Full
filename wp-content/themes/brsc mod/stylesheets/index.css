@@ -75,11 +75,11 @@ body {
     width: 38%;
     font-family: 'Playfair Display', serif; }
     .banner-container .banner-home-text h1 {
+      font-size: calc(20px + (60 - 16) * ((100vw - 375px) / (1600 - 375)));
       color: white;
-      font-style: italic;
-      text-decoration: underline; }
+      font-style: italic; }
     .banner-container .banner-home-text p {
-      font-size: 1.5em; }
+      font-size: calc(16px + (24 - 16) * ((100vw - 375px) / (1600 - 375))); }
 
 .banner-container::after {
   content: "";
@@ -116,12 +116,6 @@ body {
   left: 50%;
   margin-left: calc(4vw * -1.5);
   bottom: 3vw; }
-  .brsc-diamond-trio:hover .brsc-diamond.diamond-left {
-    bottom: 4vw;
-    left: calc(4vw * 0.4); }
-  .brsc-diamond-trio:hover .brsc-diamond.diamond-right {
-    bottom: 4vw;
-    left: calc(4vw * 1.32); }
   .brsc-diamond-trio.diamond-point-down .brsc-diamond.diamond-left {
     bottom: 4vw;
     left: calc(4vw * 0.4); }

@@ -1,0 +1,43 @@
+$diamond-size: 4vw; //define in vw
+
+@mixin diamond-container {
+  position: relative;
+  left: 50%;
+  margin-left: calc(#{$diamond-size} * -1.5);
+  &.diamond-point-down {
+    .brsc-diamond {
+      &.diamond-left {
+        bottom: $diamond-size;
+        left: calc(#{$diamond-size} * 0.4);
+      }
+      &.diamond-right {
+        bottom: $diamond-size;
+        left: calc(#{$diamond-size} * 1.32);
+      }
+    }
+  }
+  .brsc-diamond {
+    mix-blend-mode: darken;
+    position: absolute;
+    width: $diamond-size;
+    z-index: 10;
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: ease-out;
+    bottom: 0;
+    &.diamond-left {
+      left: 0px;
+    }
+    &.diamond-center {
+      left: calc(#{$diamond-size} * 0.86);
+    }
+    &.diamond-right {
+      left: calc(#{$diamond-size} * 1.72);
+    }
+  }
+}
+
+.brsc-diamond-trio {
+    @include diamond-container;
+    bottom: 3vw;
+}
