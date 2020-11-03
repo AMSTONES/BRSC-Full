@@ -24,12 +24,10 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'brsc' ); ?></a>
-  <div>
-    <div class="header-top">
+  <div class="header-wrap">
       <div class="logo-container">
         <?php the_custom_logo(); ?>
       </div>
-    </div>
 
     <?
       $logged_in = is_user_logged_in()? 'logged-in' : '';

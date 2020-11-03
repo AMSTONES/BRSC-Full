@@ -1,13 +1,24 @@
-.header-top {
-  height: 110px;
-  display: flex;
-  justify-content: center;
+.header-wrap {
+  display:flex;
+  top: 0px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
   background: $navy;
-  mix-blend-mode: darken;
   .logo-container {
-    img {
-      width: 175px;
-      margin-top: 5px;
+    // background: $navy;
+    padding: 10px 10px;
+      img {
+        width: 100px;
+        // margin-top: 5px;
+      }
     }
   }
-}
+  // .header-top {
+  // // height: 110px;
+  // padding: 10px 10px;
+  // //display: flex;
+  // justify-content: center;
+  // background: $navy;
+  // mix-blend-mode: darken;
+  // }
