@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
   const menu = siteNavigation.getElementsByTagName( 'ul' )[ 0 ];
   const linksWithChildren = menu.querySelectorAll( '.menu-item-has-children' );
   const allSubmenus = $(linksWithChildren).find('.sub-menu');
-  if ($(window).width() < 768){
+  if ($(window).width() < 1024){
     for (const menu of linksWithChildren){
     //add copy of link in submenu
     const link = menu.querySelector('a');

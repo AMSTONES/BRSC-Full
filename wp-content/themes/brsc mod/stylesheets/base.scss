@@ -26,3 +26,8 @@ body {
   50%  { transform: translateY(-20px); }
   100% { transform: translateY(0); }
 }
+
+#wpadminbar {
+  bottom: 0;
+  top: unset;
+}

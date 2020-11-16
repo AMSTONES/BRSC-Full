@@ -21,7 +21,6 @@
     .menu-item {
       padding: 5px;
       position: static;
-      //big
       @include respond-to('small') {
         &.menu-item-has-children{
           &:hover {
