@@ -35,8 +35,6 @@
 
     <nav id="site-navigation" class="<? esc_html_e($logged_in)?> main-navigation">
 
-
-
       <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'brsc' ); ?></button>
       <?php
       wp_nav_menu(
