@@ -101,13 +101,19 @@ body {
       font-size: 1.5rem; }
 
 .header-top {
-  height: 110px;
+  height: 75px;
   display: flex;
   justify-content: center;
   background: #f8f5ed; }
+  @media (min-width: 1024px) {
+    .header-top {
+      height: 110px; } }
   .header-top .logo-container img {
-    width: 175px;
-    margin-top: 5px; }
+    width: 100px; }
+    @media (min-width: 1024px) {
+      .header-top .logo-container img {
+        width: 175px;
+        margin-top: 5px; } }
 
 .market-item-wrap {
   position: relative; }
@@ -128,52 +134,83 @@ body {
 .brsc-rounded {
   border-radius: 10px; }
 
-.main-navigation .nav-menu {
-  background: #f8f5ed;
-  position: relative;
-  justify-content: center; }
-  .main-navigation .nav-menu li {
-    padding: 5px; }
-    .main-navigation .nav-menu li a {
-      color: #272677; }
-      .main-navigation .nav-menu li a:hover {
-        color: red; }
-  .main-navigation .nav-menu .menu-item {
-    padding: 5px;
-    position: static; }
-    @media (min-width: 767px) {
-      .main-navigation .nav-menu .menu-item.menu-item-has-children:hover .sub-menu {
-        display: flex; }
-      .main-navigation .nav-menu .menu-item .sub-menu {
-        position: absolute;
-        background: #272677;
-        display: none;
-        left: 0px;
-        z-index: 999;
-        width: 100%;
-        top: 100%;
-        height: 45px;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 10px; }
-        .main-navigation .nav-menu .menu-item .sub-menu .menu-item {
-          text-align: center; }
-          .main-navigation .nav-menu .menu-item .sub-menu .menu-item a {
-            color: #f8f5ed;
-            width: 100%; } }
-    .main-navigation .nav-menu .menu-item.menu-item-has-children .sub-menu {
-      display: none; }
-      .main-navigation .nav-menu .menu-item.menu-item-has-children .sub-menu.sub-show {
-        display: block; }
-  .main-navigation .nav-menu.scrolledDown {
-    top: 0px;
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    background: #f8f5ed; }
+.menu-toggle {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 999;
+  background: rgba(220, 220, 220, 0.5);
+  border: none;
+  font-size: 1.5rem;
+  color: #272677; }
+
+.main-navigation {
+  background: #f8f5ed; }
+  .main-navigation .nav-menu {
+    position: relative;
+    justify-content: center; }
+    .main-navigation .nav-menu li {
+      padding: 5px; }
+      .main-navigation .nav-menu li a {
+        color: #272677; }
+        .main-navigation .nav-menu li a:hover {
+          color: red; }
+    .main-navigation .nav-menu .menu-item {
+      padding: 5px;
+      position: static;
+      display: flex;
+      align-items: center;
+      flex-direction: column; }
+      @media (min-width: 767px) {
+        .main-navigation .nav-menu .menu-item.menu-item-has-children:hover .sub-menu {
+          display: flex; }
+        .main-navigation .nav-menu .menu-item .sub-menu {
+          position: absolute;
+          background: #272677;
+          display: none;
+          left: 0px;
+          z-index: 999;
+          width: 100%;
+          top: 100%;
+          height: 45px;
+          justify-content: center;
+          align-items: center;
+          padding: 0px 10px; }
+          .main-navigation .nav-menu .menu-item .sub-menu .menu-item {
+            text-align: center; }
+            .main-navigation .nav-menu .menu-item .sub-menu .menu-item a {
+              color: #f8f5ed;
+              width: 100%; } }
+      .main-navigation .nav-menu .menu-item.menu-item-has-children .sub-menu {
+        display: none; }
+        .main-navigation .nav-menu .menu-item.menu-item-has-children .sub-menu.sub-show {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-bottom: 2px solid #272677;
+          border-top: 2px solid #272677; }
+    .main-navigation .nav-menu.scrolledDown {
+      top: 0px;
+      position: fixed;
+      z-index: 100;
+      width: 100%;
+      background: #f8f5ed; }
 
 .main-navigation.logged-in .scrolledDown {
   top: 32px; }
+
+#site-navigation.toggled .menu-main-menu-container {
+  height: 100vh;
+  background-color: rgba(220, 220, 220, 0.8);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  top: 0px; }
+  #site-navigation.toggled .menu-main-menu-container #primary-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15vh; }
 
 .nav-image-flex-container {
   display: flex;
