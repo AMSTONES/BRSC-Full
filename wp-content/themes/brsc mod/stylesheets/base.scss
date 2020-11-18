@@ -1,5 +1,5 @@
 @import "colours";
-
+@import "breakpoints";
 
 h1 {
   color: $navy;
@@ -28,6 +28,8 @@ body {
 }
 
 #wpadminbar {
-  bottom: 0;
-  top: unset;
+  @include respond-to('small') {
+    bottom: 0;
+    top: unset;
+  }
 }
