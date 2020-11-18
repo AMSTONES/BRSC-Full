@@ -1,9 +1,20 @@
 @import 'colours';
 @import 'breakpoints';
 
+.menu-toggle {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 999;
+  background: rgba(220,220,220, 0.5);
+  border: none;
+  font-size: 1.5rem;
+  color: $navy;
+}
+
 .main-navigation {
+  background: $parchment;
   .nav-menu {
-    background: $parchment;
     position: relative;
     li {
       padding: 5px;
@@ -21,6 +32,9 @@
     .menu-item {
       padding: 5px;
       position: static;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
       @include respond-to('small') {
         &.menu-item-has-children{
           &:hover {
@@ -57,7 +71,11 @@
       .sub-menu {
         display: none;
         &.sub-show {
-          display: block;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          border-bottom: 2px solid $navy;
+          border-top: 2px solid $navy;
         }
       }
 
@@ -78,6 +96,25 @@
 .main-navigation.logged-in{
   .scrolledDown {
     top: 32px;
+  }
+}
+
+#site-navigation {
+  &.toggled {
+    .menu-main-menu-container {
+      height: 100vh;
+      background-color: rgba(220, 220, 220, 0.8);
+      position:fixed;
+      width:100%;
+      z-index:2;
+      top:0px;
+      #primary-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15vh;
+      }
+    }
   }
 }
 

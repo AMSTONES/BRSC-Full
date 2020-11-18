@@ -1,13 +1,19 @@
 @import 'colours';
 .header-top {
-  height: 110px;
+  @include respond-to('medium-large') {
+        height: 110px;
+      }
+  height: 75px;
   display: flex;
   justify-content: center;
   background: $parchment;
   .logo-container {
     img {
-      width: 175px;
-      margin-top: 5px;
+      width: 100px;
+      @include respond-to('medium-large') {
+        width: 175px;
+        margin-top: 5px;
+      }
     }
   }
 }
