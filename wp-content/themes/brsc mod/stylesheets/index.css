@@ -21,9 +21,10 @@ body {
     transform: translateY(-20px); }
   100% {
     transform: translateY(0); } }
-#wpadminbar {
-  bottom: 0;
-  top: unset; }
+@media (min-width: 767px) {
+  #wpadminbar {
+    bottom: 0;
+    top: unset; } }
 
 .front-banner-text {
   text-align: center;

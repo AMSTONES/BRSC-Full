@@ -24,7 +24,7 @@ if (is_front_page()) { ?>
     </div>
  </div>
  <a id="content-start"></a>
-<? } else { ?>
+<? } else if(has_post_thumbnail()){ ?>
   <div class="banner-container">
     <img class="banner-image banner-standard" src="<?php echo esc_attr( $img_src ); ?>" srcset="<?php echo esc_attr( $img_srcset ); ?>" sizes="auto" >
   <!-- <h1 class="banner-text"><?php single_post_title(); ?></h1> -->
