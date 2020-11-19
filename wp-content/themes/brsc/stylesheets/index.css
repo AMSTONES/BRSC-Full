@@ -115,6 +115,11 @@ body {
         width: 175px;
         margin-top: 5px; } }
 
+#login-out-link {
+  position: absolute;
+  left: 5px;
+  top: 5px; }
+
 .market-item-wrap {
   position: relative; }
   .market-item-wrap p {
