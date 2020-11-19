@@ -11,12 +11,19 @@
     z-index:3;
     position: absolute;
     padding: 11px 10px;
-      img {
-        width: 75px;
-        // margin-top: 5px;
-      }
+    img {
+      width: 75px;
+      // margin-top: 5px;
     }
   }
+}
+
+#login-out-link {
+  position: absolute;
+  left: calc(50px + 8vw);
+  top: 5px;
+  z-index:20;
+}
   // .header-top {
   // // height: 110px;
   // padding: 10px 10px;

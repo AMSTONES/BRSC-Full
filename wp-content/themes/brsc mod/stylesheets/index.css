@@ -193,6 +193,12 @@ body {
     .header-wrap .logo-container img {
       width: 75px; }
 
+#login-out-link {
+  position: absolute;
+  left: calc(50px + 8vw);
+  top: 5px;
+  z-index: 20; }
+
 .market-item-wrap {
   position: relative; }
   .market-item-wrap p {
