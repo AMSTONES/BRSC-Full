@@ -57,6 +57,9 @@
       ?>
     </div><!-- .entry-content -->
   </div>
+  <h3>
+    <a href="<?php echo get_post_type_archive_link( 'announcement' ); ?>">Announcement Archive</a>
+  </h3>
   <!-- <h1>content-announcement.php</h1> -->
   <footer class="entry-footer">
     <?php brsc_entry_footer(); ?>

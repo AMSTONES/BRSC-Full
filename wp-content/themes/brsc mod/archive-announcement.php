@@ -11,17 +11,15 @@ get_header();
 ?>
 
   <main id="primary" class="site-main">
-
     <?php if ( have_posts() ) : ?>
-
       <header class="page-header">
         <?php
         the_archive_title( '<h1 class="page-title">', '</h1>' );
         the_archive_description( '<div class="archive-description">', '</div>' );
         ?>
       </header><!-- .page-header -->
-
-      <?php
+      <div class='feed-container'>
+      <?
       /* Start the Loop */
       while ( have_posts() ) :
         the_post();
@@ -31,10 +29,35 @@ get_header();
          * If you want to override this in a child theme, then include a file
          * called content-___.php (where ___ is the Post Type name) and that will be used instead.
          */
-        get_template_part( 'template-parts/content', get_post_type() );
 
+        ?>
+        <div class="feed-post-wrap">
+            <h2 class="feed-type"><?php esc_html_e($title)?></h2>
+          <div class="feed-post brsc-rounded">
+            <? if ( has_post_thumbnail() ) { ?>
+              <a href="<?php esc_url(the_permalink())?>">
+                <? the_post_thumbnail('post-thumbnail', array('class' => 'feed-thumbnail')); ?>
+              </a>
+            <? } ?>
+            <div class="feed-text-area">
+            <h2 class="feed-title">
+              <a href="<?php esc_url(the_permalink())?>"><?php the_title() ?></a>
+            </h2>
+              <? display_race_time(); ?>
+              <? display_excerpt(); ?>
+              <? display_price()?>
+              <? display_description(); ?>
+              <a class='feed-read-more' href="<?php esc_url(the_permalink())?>">Read more</a>
+            </div>
+          </div>
+        </div>
+      <?
       endwhile;
+      ?>
+      </div>
 
+
+      <?
       the_posts_navigation();
 
     else :

@@ -100,6 +100,9 @@ body {
     .footer-container .footer-contact-container span {
       font-size: 1.5rem; }
 
+.widget-area {
+  margin-left: 10px; }
+
 .header-top {
   height: 75px;
   display: flex;
