@@ -14,7 +14,8 @@ function fp_post_types() {
     'show_in_rest' => true,
     'supports' => array( 'thumbnail', 'editor', 'title' ),
     'menu_icon' => 'dashicons-category',
-    'taxonomies'  => array( 'category' )
+    'taxonomies'  => array( 'category' ),
+    'has_archive' => true,
   ));
   register_post_type('marketplace-item', array(
     'public' => true,
@@ -45,7 +46,8 @@ function fp_post_types() {
     'show_in_rest' => true,
     'supports' => array( 'thumbnail', 'editor', 'title' ),
     'menu_icon' => 'dashicons-category',
-    'taxonomies'  => array( 'category' )
+    'taxonomies'  => array( 'category' ),
+    'has_archive' => true,
   ));
 }
 
