@@ -51,16 +51,9 @@ body {
     .banner-container .banner-image.banner-standard {
       max-height: 540px; }
   .banner-container .banner-wash {
-    height: 100%;
-    width: 100%;
-    transform: rotate(45deg);
-    mix-blend-mode: darken;
-    top: 848px;
-    border-radius: 0px;
-    background: #D71F1F;
     position: absolute;
-    top: -50%;
-    right: -50%; }
+    left: 0;
+    mix-blend-mode: darken; }
   .banner-container .banner-text {
     text-align: center;
     font-size: 60px;

@@ -8,7 +8,8 @@
 if (is_front_page()) { ?>
   <div class="banner-container">
     <img class="banner-image" src="<?php echo esc_attr( $img_src ); ?>" srcset="<?php echo esc_attr( $img_srcset ); ?>" sizes="auto" >
-      <div class="banner-wash"></div>
+    <? $banner_wash = get_template_directory_uri() . '/images/corner-wash.png';?>
+    <img class="banner-wash" src="<?php echo $banner_wash ?>">
 
     <? //echo do_shortcode("[display-posts post_type='announcement' post_category='front-page' count='3' extra_class_classes='feed-front']"); ?>
     <? $brsc_logo = get_template_directory_uri() . '/images/beaulieu-diamond.png'; ?>
