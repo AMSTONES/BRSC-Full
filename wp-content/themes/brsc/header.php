@@ -32,9 +32,7 @@
     <?
       $logged_in = is_user_logged_in()? 'logged-in' : '';
       $logged_in_bool = is_user_logged_in();
-      if ($logged_in_bool) { ?>
-        <a id='login-out-link' href="<? echo esc_url(wp_logout_url())?>">Log out</a>
-      <? } else { ?>
+      if (!$logged_in_bool) { ?>
         <a id='login-out-link' href="<? echo esc_url(wp_login_url())?>">Log in</a>
       <? } ?>
     <nav id="site-navigation" class="<? esc_html_e($logged_in)?> main-navigation">
