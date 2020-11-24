@@ -8,7 +8,7 @@ Tested up to:      5.6
 Requires PHP:      5.6  
 License:           GPLv2 or Later  
 License URI:       http://www.gnu.org/licenses/gpl-2.0.txt  
-Stable tag:        3.4.2
+Stable tag:        3.4.3
 
 
 Edit the permalink of custom post type.
@@ -82,6 +82,9 @@ That's it. You can access the permalinks setting by going to *Settings -> Permal
 * screenshot-1.png
 
 == Changelog ==
+
+= 3.4.3 =
+* Fix archive link bug fix.
 
 = 3.4.2 =
 * Tested WP 5.6.
