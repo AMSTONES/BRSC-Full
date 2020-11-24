@@ -26,6 +26,9 @@ body {
     bottom: 0;
     top: unset; } }
 
+.edit-link {
+  padding: 0 10px; }
+
 .front-banner-text {
   text-align: center;
   font-size: 60px;
@@ -214,6 +217,13 @@ body {
 .brsc-rounded {
   border-radius: 10px; }
 
+.brsc-center-text {
+  text-align: center; }
+
+.image-search-result {
+  display: block;
+  margin: auto; }
+
 .menu-toggle {
   position: fixed;
   top: -8px;
@@ -288,6 +298,13 @@ body {
   #site-navigation.toggled .menu-main-menu-container #primary-menu {
     padding-top: 25vh; }
 
+.navigation.pagination {
+  text-align: center; }
+  .navigation.pagination span {
+    padding: 5px; }
+  .navigation.pagination a {
+    padding: 5px; }
+
 .nav-image-flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -337,6 +354,11 @@ body {
           width: 100%;
           overflow: hidden; }
 
+.brsc-page-break {
+  width: 5rem;
+  display: block;
+  margin: 5px auto 5px auto; }
+
 .entry-content-wrap {
   display: flex;
   justify-content: center; }
@@ -345,6 +367,9 @@ body {
     padding-left: 15px;
     padding-right: 15px;
     margin: 0px; }
+
+.entry-footer {
+  margin: 5px 0; }
 
 .page-title {
   text-align: center; }

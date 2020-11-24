@@ -34,14 +34,12 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+    get_template_part( 'template-parts/pagination' );
 		?>
 
 	</main><!-- #main -->

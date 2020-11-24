@@ -10,7 +10,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+	<header class="entry-header brsc-center-text">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -30,36 +30,36 @@
 	</header><!-- .entry-header -->
 
 	<?php brsc_post_thumbnail(); ?>
+  <div class="entry-content-wrap">
+    <div class="entry-content">
+    <?php
+    the_content(
+      sprintf(
+        wp_kses(
+          /* translators: %s: Name of current post. Only visible to screen readers */
+          __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'brsc' ),
+          array(
+            'span' => array(
+              'class' => array(),
+            ),
+          )
+        ),
+        wp_kses_post( get_the_title() )
+      )
+    );
 
-	<div class="entry-content">
+    wp_link_pages(
+      array(
+        'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'brsc' ),
+        'after'  => '</div>',
+      )
+    );
+    ?>
+    </div><!-- .entry-content -->
+  </div>
 
-    <h1>CONTENT.php</h1>
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'brsc' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'brsc' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
+	<footer class="entry-footer brsc-center-text">
 		<?php brsc_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

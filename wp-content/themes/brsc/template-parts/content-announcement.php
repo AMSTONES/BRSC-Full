@@ -56,7 +56,7 @@
       );
       ?>
     </div><!-- .entry-content -->
-  </div>
+  </div><!-- .entry-content-wrap -->
   <h3>
     <a href="<?php echo get_post_type_archive_link( 'announcement' ); ?>">Announcement Archive</a>
   </h3>
