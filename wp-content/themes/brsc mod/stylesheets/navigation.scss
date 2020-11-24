@@ -114,3 +114,15 @@
   }
 }
 
+.navigation {
+  &.pagination {
+    text-align: center;
+    span {
+      padding: 5px;
+    }
+    a {
+      padding: 5px;
+    }
+  }
+}
+

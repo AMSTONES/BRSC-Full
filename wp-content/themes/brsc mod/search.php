@@ -34,16 +34,14 @@ get_header();
 				 * called content-search.php and that will be used instead.
 				 */
 				get_template_part( 'template-parts/content', 'search' );
-
+        get_template_part( 'template-parts/post-seperator' );
 			endwhile;
-
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
+    get_template_part( 'template-parts/pagination' );
 		?>
 
 	</main><!-- #main -->

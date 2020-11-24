@@ -4,6 +4,9 @@ h1 {
 body {
   font-family: georgia !important; }
 
+.edit-link {
+  padding: 0 10px; }
+
 .front-banner-text {
   text-align: center;
   font-size: 60px;
@@ -141,6 +144,13 @@ body {
 
 .brsc-rounded {
   border-radius: 10px; }
+
+.brsc-center-text {
+  text-align: center; }
+
+.image-search-result {
+  display: block;
+  margin: auto; }
 
 .menu-toggle {
   position: fixed;
@@ -280,6 +290,9 @@ body {
 
 .page-title {
   text-align: center; }
+
+.entry-footer {
+  margin: 5px 0; }
 
 .wp-block-column .feed-container .feed-post-wrap .feed-post {
   width: 100%; }

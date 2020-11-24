@@ -20,9 +20,19 @@ get_header();
       </header><!-- .page-header -->
       <div class='feed-container'>
       <?
+      $paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+      $query = new WP_Query( array(
+      'post_type' => 'announcement',
+      'post_status' => 'publish',
+      'posts_per_page' => 3,
+      'paged' => $paged,
+      // 'meta_key' => 'event_time',
+      // 'orderby' => 'meta_value',
+      // 'order' => 'ASC'
+    ) );
       /* Start the Loop */
-      while ( have_posts() ) :
-        the_post();
+      while ( $query->have_posts() ) :
+        $query->the_post();
 
         /*
          * Include the Post-Type-specific template for the content.
@@ -58,8 +68,12 @@ get_header();
 
 
       <?
-      the_posts_navigation();
-
+      //the_posts_navigation();
+      the_posts_pagination( array(
+        'prev_text'          => __( 'Previous page', 'cm' ),
+        'next_text'          => __( 'Next page', 'cm' ),
+        'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'cm' ) . ' </span>',
+      ) );
     else :
 
       get_template_part( 'template-parts/content', 'none' );
