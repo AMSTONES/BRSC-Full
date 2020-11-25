@@ -279,6 +279,11 @@ body {
           width: 100%;
           overflow: hidden; }
 
+.brsc-page-break {
+  width: 5rem;
+  display: block;
+  margin: 5px auto 5px auto; }
+
 .entry-content-wrap {
   display: flex;
   justify-content: center; }
