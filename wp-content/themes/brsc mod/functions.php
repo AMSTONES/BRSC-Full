@@ -235,6 +235,61 @@ add_shortcode( 'display-posts', 'display_recent_posts_func' );
 add_shortcode( 'display-nav-image-grid', 'display_nav_image_grid_func' );
 add_shortcode( 'display-events', 'display_events_func' );
 //add_shortcode( 'display-submenu-nav-grid', 'display_subpage_nav_func' );
+// remove_role('seller');
+add_role( 'seller', 'Seller', array(
+//   //  'upload_files' => true,
+//   'edit_posts' =>true,
+//   'edit_published_posts' =>true,
+//   //'publish_posts' =>true,
+  'read' =>true,
+  ));
+
+add_filter( 'register_post_type_args', 'change_capabilities_of_marketplace_item' , 10, 2 );
+
+function change_capabilities_of_marketplace_item( $args, $post_type ){
+
+ // Do not filter any other post type
+ if ( 'marketplace-item' !== $post_type ) {
+
+     // Give other post_types their original arguments
+     return $args;
+
+ }
+
+ // Change the capabilities of the "marketplace-item" post_type
+ $args['capabilities'] = array(
+            'edit_post' => 'edit_marketplace-item',
+            'edit_posts' => 'edit_marketplace-items',
+            'edit_others_posts' => 'edit_other_marketplace-items',
+            'publish_posts' => 'publish_marketplace-items',
+            'read_post' => 'read_marketplace-item',
+            'read_private_posts' => 'read_private_marketplace-items',
+            'delete_post' => 'delete_marketplace-item'
+        );
+
+  // Give the marketplace-item post type it's arguments
+  return $args;
+
+}
+
+add_action('admin_init','seller_add_role_caps',999);
+
+function seller_add_role_caps() {
+
+    $role = get_role('seller');
+    $role->add_cap( 'read_marketplace-item');
+    $role->add_cap( 'edit_marketplace-item' );
+    $role->add_cap( 'edit_marketplace-items' );
+    $role->add_cap( 'edit_other_marketplace-items' );
+    $role->add_cap( 'edit_published_marketplace-items' );
+    $role->add_cap( 'publish_marketplace-items' );
+    $role->add_cap( 'read_private_marketplace-items' );
+    $role->add_cap( 'delete_marketplace-item' );
+
+
+}
+
+
 
 /**
  * Load Jetpack compatibility file.

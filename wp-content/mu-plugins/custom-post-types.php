@@ -1,22 +1,22 @@
 <?php
 
 function fp_post_types() {
-  register_post_type('announcement', array(
-    'public' => true,
-    'labels' => array(
-      'name' => 'Announcements',
-      'add_new_item' => 'Add new announcement',
-      'edit_item' => 'Edit Announcement',
-      'all_items' => 'All Announcements',
-      'singular_name' => 'Announcement',
-    ),
+  // register_post_type('announcement', array(
+  //   'public' => true,
+  //   'labels' => array(
+  //     'name' => 'Announcements',
+  //     'add_new_item' => 'Add new announcement',
+  //     'edit_item' => 'Edit Announcement',
+  //     'all_items' => 'All Announcements',
+  //     'singular_name' => 'Announcement',
+  //   ),
 
-    'show_in_rest' => true,
-    'supports' => array( 'thumbnail', 'editor', 'title' ),
-    'menu_icon' => 'dashicons-category',
-    'taxonomies'  => array( 'category' ),
-    'has_archive' => true,
-  ));
+  //   'show_in_rest' => true,
+  //   'supports' => array( 'thumbnail', 'editor', 'title' ),
+  //   'menu_icon' => 'dashicons-category',
+  //   'taxonomies'  => array( 'category' ),
+  //   'has_archive' => true,
+  // ));
   register_post_type('marketplace-item', array(
     'public' => true,
     'labels' => array(
@@ -59,7 +59,7 @@ function fp_post_types() {
 // }
 
 function reg_tag() {
-     register_taxonomy_for_object_type('post_tag', 'announcement');
+     // register_taxonomy_for_object_type('post_tag', 'announcement');
      register_taxonomy_for_object_type('post_tag', 'marketplace-item');
      register_taxonomy_for_object_type('post_tag', 'event');
 }
