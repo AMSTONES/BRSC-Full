@@ -275,18 +275,18 @@ function change_capabilities_of_marketplace_item( $args, $post_type ){
 add_action('admin_init','seller_add_role_caps',999);
 
 function seller_add_role_caps() {
-
-    $role = get_role('seller');
-    $role->add_cap( 'read_marketplace-item');
-    $role->add_cap( 'edit_marketplace-item' );
-    $role->add_cap( 'edit_marketplace-items' );
-    $role->add_cap( 'edit_other_marketplace-items' );
-    $role->add_cap( 'edit_published_marketplace-items' );
-    $role->add_cap( 'publish_marketplace-items' );
-    $role->add_cap( 'read_private_marketplace-items' );
-    $role->add_cap( 'delete_marketplace-item' );
-
-
+    $roles_to_access = ['administrator', 'editor', 'author', 'contributor'];
+    foreach ($roles_to_access as $role_title) {
+      $role = get_role($role_title);
+      $role->add_cap( 'read_marketplace-item');
+      $role->add_cap( 'edit_marketplace-item' );
+      $role->add_cap( 'edit_marketplace-items' );
+      $role->add_cap( 'edit_other_marketplace-items' );
+      $role->add_cap( 'edit_published_marketplace-items' );
+      $role->add_cap( 'publish_marketplace-items' );
+      $role->add_cap( 'read_private_marketplace-items' );
+      $role->add_cap( 'delete_marketplace-item' );
+    }
 }
 
 
