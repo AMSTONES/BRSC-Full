@@ -1,0 +1,23 @@
+@import 'colors';
+.header-top {
+  justify-content: space-around;
+  background: $dark-grey;
+  height: 180px;
+}
+
+#front-text-container {
+  #front-title {
+    float: right;
+  }
+  #front-date {
+    float: right;
+  }
+}
+
+.header-top {
+  .logo-container {
+    img {
+      width: 300px;;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import 'colors';
+.main-navigation {
+  background: $dark-grey;
+  a {
+    color: white !important;
+    font-size: 20px;
+  }
+  .nav-menu {
+    justify-content: space-around;
+    .menu-item {
+      .sub-menu {
+        background-color: $dark-navy;
+      }
+    }
+  }
+}
