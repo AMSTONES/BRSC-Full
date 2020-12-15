@@ -10,3 +10,5 @@ function my_theme_enqueue_styles() {
         array( $parenthandle )
     );
 }
+add_theme_support( 'editor-styles' );
+add_editor_style( 'stylesheets/style-editor.css' );
