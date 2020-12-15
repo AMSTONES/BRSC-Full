@@ -1,0 +1,33 @@
+@import 'colours';
+.feed-post-wrap {
+  .feed-post {
+    .feed-title {
+      a {
+        color: white;
+      }
+    }
+    .feed-text-area {
+      .feed-read-more {
+        color: white;
+      }
+    }
+  }
+  &:first-child {
+    .feed-post {
+      background-color: $dark-red;
+    }
+  }
+  &:nth-child(even) {
+    .feed-post {
+      background-color: $dark-navy;
+    }
+  }
+  &:last-child {
+    .feed-post {
+      background-color: $mid-grey;
+    }
+  }
+}
+
+
+

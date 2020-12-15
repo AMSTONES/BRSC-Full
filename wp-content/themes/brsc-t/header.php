@@ -36,8 +36,8 @@
       );
       ?>
   </nav><!-- #site-navigation -->
-
-  <?php get_template_part('template-parts/content', 'banner'); ?>
+  <? if (is_front_page()) {
+    get_template_part('template-parts/content', 'banner'); ?>
 <!-- only call header top on home page, logo will need to be placed somewhere else -->
   <div class="header-top">
       <div class="logo-container">
@@ -49,6 +49,8 @@
       </div>
 
   </div>
+  <? } ?>
+
     <?
       $logged_in = is_user_logged_in()? 'logged-in' : '';
       $logged_in_bool = is_user_logged_in();

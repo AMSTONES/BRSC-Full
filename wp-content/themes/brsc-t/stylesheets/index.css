@@ -12,10 +12,16 @@ h1, h2, h3, h4, p {
   background: #56657c;
   height: 180px; }
 
-#front-text-container #front-title {
-  float: right; }
-#front-text-container #front-date {
-  float: right; }
+#front-text-container {
+  font-family: 'Roboto', sans-serif; }
+  #front-text-container #front-title {
+    float: right;
+    font-size: 54px;
+    margin: 10px; }
+  #front-text-container #front-date {
+    float: right;
+    font-size: 41px;
+    margin: 10px; }
 
 .header-top .logo-container img {
   width: 300px; }
@@ -29,5 +35,16 @@ h1, h2, h3, h4, p {
     justify-content: space-around; }
     .main-navigation .nav-menu .menu-item .sub-menu {
       background-color: #333953; }
+
+.feed-post-wrap .feed-post .feed-title a {
+  color: white; }
+.feed-post-wrap .feed-post .feed-text-area .feed-read-more {
+  color: white; }
+.feed-post-wrap:first-child .feed-post {
+  background-color: #bc2931; }
+.feed-post-wrap:nth-child(even) .feed-post {
+  background-color: #333953; }
+.feed-post-wrap:last-child .feed-post {
+  background-color: #91969c; }
 
 /*# sourceMappingURL=index.css.map */

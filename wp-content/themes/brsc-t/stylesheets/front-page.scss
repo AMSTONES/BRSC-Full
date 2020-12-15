@@ -1,4 +1,4 @@
-@import 'colors';
+@import 'colours';
 .header-top {
   justify-content: space-around;
   background: $dark-grey;
@@ -6,11 +6,16 @@
 }
 
 #front-text-container {
+  font-family: 'Roboto', sans-serif;
   #front-title {
     float: right;
+    font-size: 54px;
+    margin: 10px;
   }
   #front-date {
     float: right;
+    font-size: 41px;
+    margin: 10px;
   }
 }
 

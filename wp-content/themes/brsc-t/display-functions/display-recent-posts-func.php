@@ -36,7 +36,20 @@ function display_recent_posts_func($atts){
       'posts_per_page' => $count
     ) );
 
-    ob_start(); ?>
+    ob_start();
+    if ($count == 1) {
+      if ( $query->have_posts() ) :
+      while ( $query->have_posts() ) : $query->the_post();
+        display_one_post($query);
+      endwhile;
+      else:
+        _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
+      endif;
+      wp_reset_postdata();
+      $ob_str=ob_get_contents();
+      ob_end_clean();
+      return $ob_str;
+    } else { ?>
     <div class='feed-container'>
     <?php if ( $query->have_posts() ) :
       while ( $query->have_posts() ) : $query->the_post();
@@ -54,6 +67,7 @@ function display_recent_posts_func($atts){
     return $ob_str;
   }
 }
+}
   function query_loop(){
     $queries = [];
     $query_args = [ null, 'tag' => 'important', 'category_name' => 'racing' ];
@@ -69,35 +83,31 @@ function display_recent_posts_func($atts){
     return $queries;
   }
 function display_one_post($query, $title=''){ ?>
-    <div class="feed-post-wrap">
       <? if ($title) { ?>
         <h2 class="feed-type"><?php esc_html_e($title)?></h2>
       <? } ?>
-      <div class="<?php esc_html_e($args) ?>feed-post brsc-rounded">
+      <div class="<?php esc_html_e($args) ?>notice-box">
         <? if ( has_post_thumbnail() ) { ?>
           <a href="<?php esc_url(the_permalink())?>">
             <? the_post_thumbnail('post-thumbnail', array('class' => 'feed-thumbnail')); ?>
           </a>
         <? } ?>
-        <div class="feed-text-area">
-        <h2 class="feed-title">
+        <h4 class="feed-title">
           <a href="<?php esc_url(the_permalink())?>"><?php the_title() ?></a>
-        </h2>
+        </h4>
           <? display_race_time(); ?>
           <? display_excerpt(); ?>
           <? display_price()?>
           <? display_description(); ?>
           <a class='feed-read-more' href="<?php esc_url(the_permalink())?>">Read more</a>
-        </div>
       </div>
-    </div>
 <? }
 
   function display_race_time() {
-  if (get_field('race_time')) { ?>
-     <p><? esc_html_e(get_field('race_time')); ?></p>
-  <? }
-}
+    if (get_field('race_time')) { ?>
+      <p><? esc_html_e(get_field('race_time')); ?></p>
+    <? }
+  }
 
 function display_excerpt() {
   if (!get_field('item_description')) { ?>
