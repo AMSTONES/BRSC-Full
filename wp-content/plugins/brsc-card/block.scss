@@ -7,6 +7,9 @@ div.notice-box {
    text-align: center;
    margin: 25px 0px;
    font-family: 'Roboto', sans-serif;
+   a {
+     color: white;
+   }
    p {
      color: white;
    }
@@ -38,8 +41,18 @@ div.notice-box p {
    margin:0;
 }
 
-
-
+.feed-container {
+  &:first-child {
+    .notice-box {
+      background-color: red;
+    }
+  }
+  .notice-box {
+     width: 30%;
+     margin: 10px;
+     min-width: 300px;
+  }
+}
 
 // .feed-post-wrap{
 //     margin: 5px;
